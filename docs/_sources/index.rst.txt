@@ -1,4 +1,4 @@
-Welcome to pyexample's documentation!
+Welcome to qdrant-example's documentation!
 =====================================
 
 .. toctree::

@@ -12,7 +12,7 @@ from qdrant_client.qdrant_fastembed import QueryResponse
 from qdrant_example import get_dist_name, get_version
 
 
-class encoder(json.JSONEncoder):
+class Encoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, QueryResponse):
             return o.__dict__
@@ -41,10 +41,10 @@ def command_add(args):
     docs = []
     metadata = []
     for line in read_line(args.file):
-        dict = json.loads(line)
-        ids.append(dict.pop("id"))
-        docs.append(dict.pop("text"))
-        metadata.append(dict)
+        data = json.loads(line)
+        ids.append(data.pop("id"))
+        docs.append(data.pop("text"))
+        metadata.append(data)
 
     client = QdrantClient(host=args.host, port=args.port, https=False)
     client.set_model("intfloat/multilingual-e5-large")
