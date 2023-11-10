@@ -1,0 +1,10 @@
+{
+    "must": [
+        {
+            "key": "location",
+            "match": {
+                "value": "東京都"
+            }
+        }
+    ]
+}

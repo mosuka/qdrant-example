@@ -1,0 +1,10 @@
+qdrant_example package
+===================
+
+Module contents
+---------------
+
+.. automodule:: qdrant-example
+   :members:
+   :undoc-members:
+   :show-inheritance:
